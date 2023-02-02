@@ -8,6 +8,7 @@
 #include "common.h"
 #include "configuration.h"
 #include <vector>
+#include <list>
 #include <algorithm>
 #include <random>
 #define SIZE 1000
@@ -34,6 +35,9 @@ namespace naivemarkov{
         std::vector<int> indices_to_erase_or_fault;
         std::vector<int> normal_to_weak;
         std::vector<int> weak_to_normal;
+
+        std::list<std::vector<int>> list_of_normal_cell;
+        std::list<std::vector<int>> list_of_weak_cell;
 
         void Good_state();
         void Normal_state();
