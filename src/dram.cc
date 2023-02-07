@@ -5,6 +5,7 @@
 namespace naivemarkov{
     DRAM::DRAM(Config &config) :
             config_(config) {
+        SIZE = config_.ROW * config_.COL * config_.DEVICE_WIDTH;
         SIZE_G = SIZE * config_.Rg;
         SIZE_N = SIZE * config_.Rn;
         SIZE_W = SIZE * config_.Rw;

@@ -17,6 +17,7 @@ namespace naivemarkov {
 
         // The initialization of the parameters has to be strictly in this order
         // because of internal dependencies
+        InitDeviceParams();
         InitFaultParams();
 
         delete (reader_);
@@ -34,6 +35,16 @@ namespace naivemarkov {
     double Config::GetDouble(const std::string &sec, const std::string &opt,
                              double default_val) const {
         return static_cast<double>(reader_->GetReal(sec, opt, default_val));
+    }
+
+    void Config::InitDeviceParams() {
+        const auto &reader = *reader_;
+        ROW = GetInteger("device_parameters", "ROW", 100);
+        COL = GetInteger("device_parameters", "COL", 100);
+        DEVICE_WIDTH = GetInteger("device_parameters", "DEVICE_WIDTH", 4);
+//Example
+//        bus_width = GetInteger("system", "bus_width", 64);
+//        address_mapping = reader.Get("system", "address_mapping", "chrobabgraco");
     }
 
     void Config::InitFaultParams() {

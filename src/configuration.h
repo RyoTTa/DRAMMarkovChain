@@ -35,6 +35,10 @@ namespace naivemarkov {
         double Pw;
         double Pb;
 
+        int ROW;
+        int COL;
+        int DEVICE_WIDTH;
+
         std::string output_dir;
         std::string output_prefix;
 
@@ -50,6 +54,7 @@ namespace naivemarkov {
         double GetDouble(const std::string &sec, const std::string &opt,
                          double default_val) const;
 
+        void InitDeviceParams();
         void InitFaultParams();
 
 

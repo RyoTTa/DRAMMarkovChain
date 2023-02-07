@@ -57,7 +57,7 @@ int main(int argc, const char **argv){
     std::cout << "repeat round : " << repeat_round << std::endl;
 
 	for(int i=0; i < repeat_round; i++){
-        if ((mem->SIZE_B + mem->SIZE_G + mem->SIZE_N + mem->SIZE_W) != SIZE) {
+        if ((mem->SIZE_B + mem->SIZE_G + mem->SIZE_N + mem->SIZE_W) != mem->SIZE) {
             std::cerr << "Size unFit" << std::endl;
             AbruptExit(__FILE__, __LINE__);
         }

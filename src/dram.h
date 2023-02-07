@@ -11,7 +11,6 @@
 #include <list>
 #include <algorithm>
 #include <random>
-#define SIZE 1000
 namespace naivemarkov{
 
     class DRAM {
@@ -19,6 +18,7 @@ namespace naivemarkov{
         DRAM(Config &config);
         ~DRAM() { good_cell.clear(); normal_cell.clear(); weak_cell.clear(), bad_cell.clear(); }
 
+        int SIZE;
         int SIZE_G;
         int SIZE_N;
         int SIZE_W;
