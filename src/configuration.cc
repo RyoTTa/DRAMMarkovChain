@@ -49,6 +49,7 @@ namespace naivemarkov {
 
     void Config::InitFaultParams() {
         const auto &reader = *reader_;
+        GROUP = GetInteger("fault_parameters", "number_of_group", 10);
         Rg = GetDouble("fault_parameters", "R_good", 0.001);
         Rn = GetDouble("fault_parameters", "R_normal", 0.001);
         Rw = GetDouble("fault_parameters", "R_weak", 0.001);

@@ -12,7 +12,7 @@ int main(int argc, const char **argv){
             "DRAM Fault Simulator.",
             "Examples: \n."
             "./build/naivemarkovmain -r 1000\n"
-            "./build/naivemarkovmain configs/test.ini -r 1000");
+            "./build/naivemarkovmain -c configs/test.ini -r 1000");
     args::HelpFlag help(parser, "help", "Display the help menu", {'h', "help"});
     args::ValueFlag<uint64_t> num_repeat_arg(
             parser, "num_repeat",

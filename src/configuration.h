@@ -39,6 +39,7 @@ namespace naivemarkov {
         int COL;
         int DEVICE_WIDTH;
 
+        int GROUP;
         std::string output_dir;
         std::string output_prefix;
 
