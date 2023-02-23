@@ -56,15 +56,14 @@ int main(int argc, const char **argv){
 	DRAM *mem = new DRAM(*config);
     std::cout << "repeat round : " << repeat_round << std::endl;
 
+    mem->PrintFaultmap();
 	for(int i=0; i < repeat_round; i++){
         if ((mem->SIZE_B + mem->SIZE_G + mem->SIZE_N + mem->SIZE_W) != mem->SIZE) {
-            std::cerr << "Size unFit" << std::endl;
+            std::cerr << "[ERROR]Sum of all cells is different from ROW*COL*DEVICE_WIDTH" << std::endl;
             AbruptExit(__FILE__, __LINE__);
         }
         mem->Fault_injection();
         mem->State_change();
-		if((i % (repeat_round/100)) == 0)
-            std::cout << "#";
 
 	}
     std::cout << std::endl;

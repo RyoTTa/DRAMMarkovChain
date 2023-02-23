@@ -23,6 +23,8 @@ namespace naivemarkov{
         int SIZE_N;
         int SIZE_W;
         int SIZE_B;
+        std::vector<int>SIZE_G_N;
+        std::vector<int>SIZE_G_W;
 
         std::vector<int> fault_map;
 
@@ -36,8 +38,11 @@ namespace naivemarkov{
         std::vector<int> normal_to_weak;
         std::vector<int> weak_to_normal;
 
-        std::list<std::vector<int>> list_of_normal_cell;
-        std::list<std::vector<int>> list_of_weak_cell;
+        std::list<std::vector<int>*> list_of_group_weak_to_normal;
+        std::list<std::vector<int>*> list_of_group_normal_to_weak;
+
+        std::list<std::vector<int>*> list_of_group_weak_cell;
+        std::list<std::vector<int>*> list_of_group_normal_cell;
 
         void Good_state();
         void Normal_state();

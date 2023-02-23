@@ -20,26 +20,45 @@ namespace naivemarkov {
 
         void PrintInfo();
 
+        //String type is parsing temporary variable
         double Rg;
         double Rn;
         double Rw;
         double Rb; // All Ratio Sum == 1
+        std::string TEMP_G_Rn;
+        std::string TEMP_G_Rw;
+        std::vector<double> G_Rn; // All Ratio Sum == 1
+        std::vector<double> G_Rw; // All Ratio Sum == 1
 
-        double Pnw;
-        double Pnn;
-        double Pwn;
-        double Pww;
+        std::string TEMP_G_Pnw;
+        std::string TEMP_G_Pnn;
+        std::string TEMP_G_Pwn;
+        std::string TEMP_G_Pww;
+        std::vector<double> G_Pnw;
+        std::vector<double> G_Pnn;
+        std::vector<double> G_Pwn;
+        std::vector<double> G_Pww;
 
         double Pg;
+        std::string TEMP_G_Pn;
+        std::string TEMP_G_Pw;
+        double Pb;
+
+        std::vector<double> G_Pn;
+        std::vector<double> G_Pw;
+
+        //For Test Start
+        double Pnw;
+        double Pwn;
         double Pn;
         double Pw;
-        double Pb;
+        //For Test Start
 
         int ROW;
         int COL;
         int DEVICE_WIDTH;
-
         int GROUP;
+
         std::string output_dir;
         std::string output_prefix;
 
@@ -49,6 +68,8 @@ namespace naivemarkov {
 
         void CalculateSize();
 
+        std::string Get(const std::string &sec, const std::string &opt, std::string default_val) const;
+
         int GetInteger(const std::string &sec, const std::string &opt,
                        int default_val) const;
 
@@ -57,7 +78,7 @@ namespace naivemarkov {
 
         void InitDeviceParams();
         void InitFaultParams();
-
+        void ParsingFaultParams();
 
     };
 
