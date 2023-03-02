@@ -161,6 +161,7 @@ namespace naivemarkov {
         }
 
         //For Test
+        /*
         std::cout << "G_Rn : ";
         for(iter = G_Rn.begin(); iter != G_Rn.end(); iter++){
             std::cout << *iter << " ";
@@ -196,6 +197,7 @@ namespace naivemarkov {
             std::cout << *iter << " ";
         }
         std::cout << std::endl;
+         */
 
     }
 

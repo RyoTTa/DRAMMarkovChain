@@ -281,7 +281,7 @@ namespace naivemarkov{
         SIZE_W = std::accumulate(SIZE_G_W.begin(), SIZE_G_W.end(), 0);
         SIZE_B = bad_cell.size();
 
-        std::cout << "CHANGE : G:" << SIZE_G << " N: " << SIZE_N << " W: " << SIZE_W << " B: " << SIZE_B << std::endl;
+        //std::cout << "CHANGE : G:" << SIZE_G << " N: " << SIZE_N << " W: " << SIZE_W << " B: " << SIZE_B << std::endl;
 
         //Initialized vector capacity
         weak_to_normal.clear();
@@ -424,7 +424,7 @@ namespace naivemarkov{
         indices_to_erase_or_fault.clear();
         probability_v.clear();
 
-        PrintFaultmap();
+        //PrintFaultmap();
     }
 
     void DRAM::PrintFaultmap(){
